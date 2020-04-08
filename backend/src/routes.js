@@ -23,10 +23,14 @@ routes.post("/files", upload.single("file"), FileController.store);
 
 routes.post("/Appointments", AppoinmentController.store);
 routes.get("/Appointments", AppoinmentController.index);
+routes.delete('/notifications/:id', AppoinmentController.delete);
 
 routes.put("/users", UserController.update);
 routes.get('/schedule', ScheduleController.index);
 routes.get('/notifications', NotificationController.index);
+routes.put('/notifications/:id', NotificationController.update);
+
+
 
 
 export default routes;
