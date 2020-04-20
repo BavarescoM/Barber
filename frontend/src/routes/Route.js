@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import AuthLayout from "../pages/_layouts/auth";
-import defaultLayout from "../pages/_layouts/default";
 import DefaultLayout from "../pages/_layouts/default";
 export default function RouterWrapper({
   component: Component,
