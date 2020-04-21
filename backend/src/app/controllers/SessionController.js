@@ -7,7 +7,7 @@ class SessionController {
   async store(req, res) {
     const schema = Yup.object().shape({
       email: Yup.string().email(),
-      password: Yup.string().required()
+      password: Yup.string().required(),
     });
     if (!(await schema.isValid(req.body))) {
       return res.status(400).json({ error: "Validations fails" });
@@ -25,11 +25,11 @@ class SessionController {
       user: {
         id,
         name,
-        email
+        email,
       },
       token: jwt.sign({ id }, authConfig.secret, {
-        expiresIn: authConfig.expiresIn
-      })
+        expiresIn: authConfig.expiresIn,
+      }),
     });
   }
 }
