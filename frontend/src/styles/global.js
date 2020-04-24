@@ -27,7 +27,10 @@ a{
 }
 ul {
     text-decoration: none;
+    list-style-type: none;
+
 }
+
 button {
     cursor: pointer;
 }
